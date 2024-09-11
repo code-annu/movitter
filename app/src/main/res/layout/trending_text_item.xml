@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tti_mainContainerLL"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_primary_ripple"
+    android:padding="15dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_trending_up"
+        android:contentDescription="@string/image_desc"
+        app:tint="@color/dominant" />
+
+    <TextView
+        android:id="@+id/tti_trendingTextTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/RegularText"
+        android:textColor="@color/dominant"
+        android:layout_marginStart="5dp"
+        android:text="Action"/>
+
+</LinearLayout>

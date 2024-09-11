@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#f5f8fa</color>
+    <color name="primary_dark">#e1e8ed</color>
+    <color name="accent">#1DA1F2</color>
+    <color name="accent_light">#CC8BD4FF</color>
+    <color name="secondary">#14171A</color>
+    <color name="secondary_semi_transparent">#CC14171A</color>
+    <color name="helper">#AAB8C2</color>
+    <color name="dominant">#657786</color>
+    <color name="red">#EB2121</color>
+    <color name="dominant_ripple">#1A657786</color>
+    <color name="secondary_ripple">#1A14171A</color>
+
+</resources>

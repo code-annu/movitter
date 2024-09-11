@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary"
+    tools:context=".main.fragments.SearchFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/fs_appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        app:liftOnScrollColor="@android:color/transparent">
+
+        <com.google.android.material.search.SearchBar
+            android:id="@+id/fs_searchPostSB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/RegularText"
+            android:hint="@string/search_on_movitter"
+            app:navigationIconTint="@color/dominant"
+            app:backgroundTint="@color/primary_dark"/>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.search.SearchView
+        android:id="@+id/fs_searchPostSV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:backgroundTint="@color/primary"
+        app:submitBackground="@color/red"
+        android:paddingTop="0dp"
+        android:translationY="-30dp"
+        android:hint="@string/search_on_movitter"
+        android:textAppearance="@style/RegularText"
+        app:layout_anchor="@id/fs_searchPostSB">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:minHeight="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fs_autoFillHintContainerRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                <TextView
+                    android:id="@+id/fs_noResultsFoundTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:text="@string/no_results_found"
+                    android:textColor="@color/dominant"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fs_searchedResultsContainerRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="vertical"/>
+
+            </FrameLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.google.android.material.search.SearchView>
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_behavior="@string/searchbar_scrolling_view_behavior">-->
+
+
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+<!--    <androidx.constraintlayout.widget.Group-->
+<!--        android:id="@+id/fs_trendingOnMovitterFlow"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:constraint_referenced_ids="fs_trendingOnMovitterTV,fs_trendingGenreContainerRV"-->
+<!--        app:layout_constraintStart_toStartOf="@id/fs_searchMovieSV"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/fs_searchMovieSV"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/fs_searchMovieSV"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/fs_trendingOnMovitterTV"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        style="@style/MediumText"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="@string/trending_on_movitter"-->
+<!--        app:layout_constraintStart_toStartOf="@id/fs_searchMovieSV"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/fs_searchMovieSV"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/fs_searchMovieSV"/>-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/fs_trendingGenreContainerRV"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="500dp"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/fs_trendingOnMovitterTV"/>-->
+
+<!--    <ProgressBar-->
+<!--        android:id="@+id/fs_searchingPB"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:indeterminateTint="@color/accent"-->
+<!--        android:visibility="gone"-->
+<!--        android:alpha="0"-->
+<!--        app:layout_constraintStart_toStartOf="@id/fs_searchMovieSV"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/fs_searchMovieSV"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/fs_searchMovieSV"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/fs_searchAutofillHintContainerRV"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone"-->
+<!--        android:alpha="0"-->
+<!--        app:layout_constraintStart_toStartOf="@id/fs_searchMovieSV"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/fs_searchMovieSV"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/fs_searchMovieSV"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/fs_noResultsTV"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="@string/no_results_found"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        style="@style/MediumTitleText"-->
+<!--        android:textColor="@color/dominant"-->
+<!--        android:visibility="gone"-->
+<!--        android:alpha="0"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/fs_searchMovieSV"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/fs_searchResultsContainerRV"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:visibility="gone"-->
+<!--        android:alpha="0"-->
+<!--        app:layout_constraintStart_toStartOf="@id/fs_searchMovieSV"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/fs_searchMovieSV"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/fs_searchMovieSV"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

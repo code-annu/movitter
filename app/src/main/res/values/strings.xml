@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Movitter</string>
+    <string name="image_desc">Image</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Authentication Strings -->
+    <string name="aa_welcome_title">Welcome to the world of movies</string>
+    <string name="aa_welcome_message">Immerse yourself in unforgettable stories and exciting adventures!</string>
+    <string name="continue_with_google">Continue with google</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="fullname">Fullname</string>
+    <string name="pick_an_avatar">Pick an avatar</string>
+    <string name="continue_text">Continue</string>
+    <string name="fullname_is_required">Fullname is required</string>
+    <string name="please_pick_an_avatar">Please pick an avatar</string>
+    <string name="terms_of_use">By continuing, you agree to our Terms of Use and Privacy Policy.</string>
+
+    <!-- Main Strings -->
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="my_posts">My posts</string>
+    <string name="profile">Profile</string>
+    <string name="hello_user">Hello, %s</string>
+    <string name="good_morning">Good morning</string>
+    <string name="good_afternoon">Good afternoon</string>
+    <string name="good_evening">Good evening</string>
+    <string name="good_night">Good night</string>
+    <string name="trending_on_movitter">Trending on movitter</string>
+    <string name="search_on_movitter">Search on movitter....</string>
+    <string name="rest_image_counter">%d+</string>
+    <string name="image_indicator">%d/%d</string>
+
+
+
+    <!-- Posts Management Strings -->
+    <string name="create_post">Create post</string>
+    <string name="movie_series_title">Movie or series title</string>
+    <string name="add_some_description">Add some description…</string>
+    <string name="description_character_count">%d/100</string>
+    <string name="image_count">%d/%d</string>
+    <string name="add_photo">Add photo</string>
+    <string name="add_genres">Add genres</string>
+    <string name="enter_genre">Enter genre</string>
+    <string name="post">Post</string>
+    <string name="post_your_reply">Post your reply</string>
+    <string name="reply">Reply</string>
+    <string name="update_post">Update post</string>
+    <string name="tick">Tick</string>
+    <string name="title_required">Title is required</string>
+    <string name="description_required">Description is required</string>
+    <string name="add_minimum_one_image">Add minimum one image</string>
+    <string name="add_minimum_one_genre">Select minimum one genre</string>
+    <string name="avatar_is_required">Please select a avatar first</string>
+    <string name="pick_photos">Pick photos</string>
+    <string name="post_created_successfully">Post created successfully</string>
+    <string name="discard_changes">Discard changes</string>
+    <string name="discard_changes_message">Changes are not saved. Are you sure you want to discard changes?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="no_results_found">No results found</string>
+    <string name="comment_posted">You have posted a comment</string>
+
+</resources>

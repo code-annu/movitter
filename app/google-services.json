@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "532534939613",
+    "project_id": "movitter-f803d",
+    "storage_bucket": "movitter-f803d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532534939613:android:109ef7b108dcc8f8aaf034",
+        "android_client_info": {
+          "package_name": "developer.anurag.movitter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "532534939613-ir7j90f3o3udqmmilm01lh3n9mvrhhjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgl00av4n2qZjSN8_lBflrajGvRLo7S5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "532534939613-ir7j90f3o3udqmmilm01lh3n9mvrhhjd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".authentication.fragments.SignupLoginFragment">
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/fsl_imageSlideShowVP"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/fsl_imageSlideShowIndicationFlow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:flow_horizontalGap="5dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="fsl_imageSlideShowIndicator1,fsl_imageSlideShowIndicator2,fsl_imageSlideShowIndicator3"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="chain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fsl_imageSlideShowVP" />
+
+    <View
+        android:id="@+id/fsl_imageSlideShowIndicator1"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:background="@drawable/helper_circle"/>
+
+    <View
+        android:id="@+id/fsl_imageSlideShowIndicator2"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:background="@drawable/secondary_circle"/>
+
+    <View
+        android:id="@+id/fsl_imageSlideShowIndicator3"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:background="@drawable/helper_circle"/>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/fsl_welcomeMessageFlow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="fsl_welcomeTitleTV,fsl_welcomeMessageTV"
+        app:flow_verticalGap="10dp"
+        android:orientation="vertical"
+        app:layout_constraintVertical_bias=".7"
+        app:layout_constraintTop_toBottomOf="@id/fsl_imageSlideShowIndicationFlow"
+        app:layout_constraintStart_toStartOf="@id/fsl_continueWithGoogleBtn"
+        app:layout_constraintEnd_toEndOf="@id/fsl_continueWithGoogleBtn"
+        app:layout_constraintBottom_toTopOf="@id/fsl_continueWithGoogleBtn"/>
+
+    <TextView
+        android:id="@+id/fsl_welcomeTitleTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/aa_welcome_title"
+        style="@style/BoldLargeText"/>
+
+    <TextView
+        android:id="@+id/fsl_welcomeMessageTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/aa_welcome_message"
+        style="@style/RegularText"/>
+
+    <Button
+        android:id="@+id/fsl_continueWithGoogleBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_primary_button"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="@string/continue_with_google"
+        android:textColor="@color/secondary"
+        app:backgroundTint="@android:color/white"
+        app:backgroundTintMode="multiply"
+        style="@style/MediumText"
+        app:cornerRadius="@dimen/corner_radius"
+        app:icon="@drawable/ic_google"
+        app:iconGravity="textStart"
+        app:iconPadding="20dp"
+        app:iconSize="30dp"
+        app:iconTint="@null"
+        app:strokeColor="@color/secondary"
+        app:strokeWidth="1dp"
+        app:layout_constraintBottom_toTopOf="@id/fsl_agreeTermsOfUseTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fsl_imageSlideShowIndicationFlow"
+        app:layout_constraintVertical_bias=".8"/>
+
+
+    <TextView
+        android:id="@+id/fsl_agreeTermsOfUseTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/terms_of_use"
+        android:textSize="12sp"
+        android:textColor="#657786"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/inter_regular"
+        android:textAlignment="center"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintStart_toStartOf="@id/fsl_continueWithGoogleBtn"
+        app:layout_constraintEnd_toEndOf="@id/fsl_continueWithGoogleBtn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/fsl_mainCoverFL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:alpha="0"
+        android:background="@color/secondary_semi_transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            app:lottie_rawRes="@raw/creating_account_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

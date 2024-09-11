@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primary_dark"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/csv_backNavigationIB"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_back_navigation"
+        android:contentDescription="@string/image_desc"
+        android:background="@drawable/bg_primary_dark_ripple"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tint="@color/secondary" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/csv_searchTIL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        app:cursorColor="@color/helper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/csv_backNavigationIB"
+        app:endIconMode="clear_text"
+        app:endIconDrawable="@drawable/ic_close"
+        app:endIconTint="@color/secondary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/csv_searchEtT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_on_movitter"
+            android:background="@android:color/transparent"
+            style="@style/MediumText"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:textColorHint="@color/helper"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            tools:ignore="Autofill" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/csv_clearTextIB"-->
+<!--        android:layout_width="45dp"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:src="@drawable/ic_close"-->
+<!--        android:background="@drawable/bg_primary_dark_ripple"-->
+<!--        android:contentDescription="@string/image_desc"-->
+<!--        android:padding="10dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:tint="@color/secondary" />-->
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

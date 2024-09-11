@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/primary_dark"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".posts_management.CreatePostActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/acp_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:liftOnScrollColor="@color/primary">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/acp_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            app:navigationIconTint="@color/secondary">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/acp_cancelIB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_close"
+                    android:padding="10dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:contentDescription="@string/image_desc"
+                    android:background="@drawable/bg_primary_ripple"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_post"
+                    style="@style/BoldLargeText"
+                    android:layout_gravity="center"/>
+
+                <ImageButton
+                    android:id="@+id/acp_submitBtnIB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_check"
+                    android:padding="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:contentDescription="@string/image_desc"
+                    android:background="@drawable/bg_primary_ripple"/>
+
+            </FrameLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/acp_postInputContainerNSV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/acp_titleDescriptionFlow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:layout_marginTop="03dp"
+                android:padding="15dp"
+                android:paddingTop="30dp"
+                app:flow_verticalGap="15dp"
+                android:orientation="vertical"
+                app:constraint_referenced_ids="acp_titleTIL,acp_descriptionTIL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/acp_titleTIL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:counterMaxLength="80"
+                app:counterEnabled="true"
+                app:counterTextColor="@color/helper"
+                android:layout_marginTop="50dp"
+                style="@style/InputBoxLayoutStyle"
+                app:startIconDrawable="@drawable/ic_title"
+                app:startIconTint="@color/helper">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/acp_titleET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="80"
+                    android:background="@drawable/bg_primary_dark"
+                    style="@style/InputBoxEditTextStyle"
+                    android:hint="@string/movie_series_title"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/acp_descriptionTIL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                app:counterMaxLength="200"
+                app:counterEnabled="true"
+                app:counterTextColor="@color/helper"
+                style="@style/InputBoxLayoutStyle"
+                app:startIconTint="@color/helper">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/acp_descriptionET"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:gravity="top"
+                    android:maxLength="200"
+                    android:background="@drawable/bg_primary_dark"
+                    style="@style/InputBoxEditTextStyle"
+                    android:hint="@string/add_some_description"
+                    android:inputType="textMultiLine"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/acp_photosFlow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                app:flow_verticalGap="10dp"
+                android:orientation="vertical"
+                app:constraint_referenced_ids="acp_addPhotosTV,acp_photosContainerRv,acp_pickPhotosBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/acp_titleDescriptionFlow"/>
+
+            <TextView
+                android:id="@+id/acp_addPhotosTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/add_photo"
+                style="@style/RegularText"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/acp_photosContainerRv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="false"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/acp_pickPhotosBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/pick_photos"
+                style="@style/AccentButtonStyle"/>
+
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/acp_addGenresFlow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:paddingBottom="20dp"
+                android:orientation="vertical"
+                app:flow_verticalGap="15dp"
+                app:constraint_referenced_ids="acp_addGenresTV,acp_genresContainerGL,acp_createPostBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/acp_photosFlow"/>
+            
+            <TextView
+                android:id="@+id/acp_addGenresTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/add_genres"
+                style="@style/RegularText"/>
+
+            <GridLayout
+                android:id="@+id/acp_genresContainerGL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:columnCount="3"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/acp_createPostBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/create_post"
+                style="@style/AccentButtonStyle"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/acp_creatingPostAnimationFL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:alpha="0"
+        android:background="@color/secondary_semi_transparent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:lottie_rawRes="@raw/creating_post_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

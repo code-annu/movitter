@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authentication_navigation"
+    app:startDestination="@id/navigation_splash">
+
+    <fragment
+        android:id="@+id/navigation_signupLogin"
+        android:name="developer.anurag.movitter.authentication.fragments.SignupLoginFragment"
+        android:label="fragment_signup_login"
+        tools:layout="@layout/fragment_signup_login" >
+        <action
+            android:id="@+id/action_navigation_signupLogin_to_navigation_createAccount"
+            app:destination="@id/navigation_createAccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_createAccount"
+        android:name="developer.anurag.movitter.authentication.fragments.CreateAccountFragment"
+        android:label="fragment_create_account"
+        tools:layout="@layout/fragment_create_account" />
+    <fragment
+        android:id="@+id/navigation_splash"
+        android:name="developer.anurag.movitter.authentication.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_navigation_splash_to_navigation_signupLogin"
+            app:destination="@id/navigation_signupLogin" />
+    </fragment>
+</navigation>

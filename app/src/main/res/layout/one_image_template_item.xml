@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/oiti_mainContainerLL"
+    android:src="@color/primary_dark"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/oiti_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@color/primary_dark"
+        android:contentDescription="@string/image_desc"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
+
+</LinearLayout>
